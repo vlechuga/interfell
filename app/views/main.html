@@ -1,0 +1,28 @@
+<div>
+  <h3>Total Items ({{vm.controlPage.total}}) | Total seen: ({{vm.counter.totalSeen}}) | Total no seen: ({{vm.counter.totalNoSeen}}) </h3>
+  <br/><br/>
+  <div>
+    <input id="search" name="search"
+           type="text"
+           placeholder="Enter string"
+           ng-model="vm.filter.search">
+    <button class="btn" ng-click="vm.search()">Search<i class="icon-search"></i></button>
+  </div>
+
+  <table ng-table="vm.dataTable" class="table" show-filter="false">
+    <tr ng-repeat="item in $data">
+      <td title="'ID'" sortable="'id'">
+        {{item.id}}</td>
+      <td title="'criticality'" sortable="'criticality'">
+        {{item.criticality}}</td>
+      <td title="'timestamp'" sortable="'timestamp'">
+        {{item.timestamp}}</td>
+      <td title="'eventBody'" sortable="'eventBody'">
+        {{item.eventBody.symbol}}</td>
+      <td title="'status'" sortable="'status'">
+        {{item.status}}</td>
+      <td title="'checked'" sortable="'checked'">
+        {{item.checked}}</td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,18 @@
+
+body {
+  padding: 0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 740px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 600px) {
+  h3 {
+    font-size: 12px !important;
+  }
+}
