@@ -11,7 +11,7 @@ angular
           totalNoSeen: 0
         };
         var defered = $q.defer();
-        $http.get('test_json.json').then(function (response) {
+        $http.get('data/test_json.json').then(function (response) {
 
           angular.forEach(response.data, function(item) {
             if(item.checked === 'visto') {
@@ -31,7 +31,7 @@ angular
       function findFn(page, count, search, orderBy) {
         var json = {};
         var defered = $q.defer();
-        $http.get('test_json.json').then(function (response) {
+        $http.get('data/test_json.json').then(function (response) {
 
           if (angular.isDefined(search)) {
             response.data = $filter('filter')(response.data, {$: search});
